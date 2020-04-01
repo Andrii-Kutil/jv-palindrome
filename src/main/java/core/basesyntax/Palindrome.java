@@ -21,6 +21,7 @@ public class Palindrome {
      * <p>Результат: true</p>
      */
     public boolean isPalindrome(String text) {
-        return false;
+        StringBuilder stringBuilder = new StringBuilder(text.toLowerCase().replaceAll("\\W", ""));
+        return stringBuilder.toString().equals(stringBuilder.reverse().toString());
     }
 }
